@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en" and dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>interactive login form</title>
+
+<style>
+    body{
+        background-color: #082247;
+        margin:auto;
+        padding:0;
+        font-family: sans-serif;
+    }
+    .box{
+        width: 180px;
+        height: 200px;
+        top:50%;
+        left:50%;
+        /* padding:25px 0px 0px 0px; */
+        /* transform:translate(50%,50%); */
+        
+         margin:auto;
+        /* background: rgba(0,0,0,0.4); */
+        text-align: center;
+    }
+    /* .box h1{
+        color:white;
+        text-transform:uppercase ;
+        font-weight: 700;
+    } */
+    .box legend{
+        color:aliceblue
+    }
+    .box fieldset{
+        margin: auto;
+        color: #e7d7e6;
+        background: rgba(0,0,0,0.4);
+    }
+    .box input[type="text"],.box input[type="password"]{
+border:0;
+background:none;
+display:block;
+margin: 5px auto;
+text-align: center;
+border: 3px solid #0367fd;
+padding: 7px 5px;
+width:150px;
+height:15px;
+outline:none;
+color:white;
+border-radius:20px;
+transition:0.25px;
+    }
+    .box input[type="text"]:focus,.box input[type="password"]:focus
+{
+width:150px;
+border-color:#ffc400ec;
+}
+.box input[type="submit"]{
+border:0;
+background:none;
+display:block;
+margin: 5px auto;
+text-align: center;
+border: 3px solid #0367fd;
+padding: 7px 5px;
+width:75px;
+outline:none;
+color:white;
+border-radius:24px;
+transition:0.25px;
+    }
+.box input[type="submit"]:hover{
+    background-color: #e7d7e6;
+    color:black;
+}
+
+
+</style>
+<script lang="javascript">
+function validate(){
+    var username=document.getElementById("username").value;
+    var password=document.getElementById("password").value;
+if (username=="admin"&& password=="user"){
+    alert("login successfully");
+    return false;
+} else {
+    alert("login failed");
+}
+}
+</script>
+</head>
+<body>
+    <form action="login.html" class="box" method="post">
+      <fieldset>
+        <legend> Login</legend>
+        <input type="text" name="" placeholder="Enter Username" id="username">
+        <input type="password" name="" placeholder="Enter password" id="password" >
+        <input type="submit" name="" value="login" onclick="validate()" >
+
+      </fieldset>  
+    </form>
+</body>
+</html>
